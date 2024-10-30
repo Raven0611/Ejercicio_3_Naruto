@@ -1,0 +1,51 @@
+.Home {
+    width: 100%;
+    height: auto;
+    background-color: rgb(81, 28, 167);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+.contenedor-home {
+    display: flex;
+    width: 24rem;
+    height: 10rem;
+    margin: .5rem;
+    border: .2rem solid black;
+    background-color: gray;
+    border-radius: .5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.img-home {
+    width: 50%;
+    height: auto;
+    border-radius: .5rem;
+}
+
+.info-home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.nombre-home {
+    width: 100%;
+    display: flex;
+    color: white;
+    font-family: 'Arial', Times, serif;
+    font-size: 1.5rem;
+    justify-content: space-around;
+}
+
+.estado-tipo-home {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Arial', Times, serif;
+}
