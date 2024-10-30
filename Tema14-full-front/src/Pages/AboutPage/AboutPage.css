@@ -1,5 +1,96 @@
-#about-div {
-    background-color: rgb(54, 42, 42);
-    height: 100%;
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8cdcd;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.contenedor-about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
     width: 100%;
+}
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.img-about-page {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.info-about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nombre-about-page {
+    font-size: 2rem;
+
+    color: #333;
+
+    margin-bottom: 10px;
+
+}
+
+.about-about-page {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+}
+
+.clan-about-page,
+.genero-about-page,
+.cumpleanos-about-page {
+    font-size: 1rem;
+
+    color: #555;
+    margin: 5px 0;
+
+}
+
+span {
+    font-weight: bold;
+
 }

@@ -10,15 +10,11 @@ const NavBar = () => {
       <Link to={"/"} >
         <Button className="boton-nav" variant="contained">Inicio</Button>
       </Link>
-      <Link to={"/characterPage"} >
-        <Button className="boton-nav" variant="contained">Aliens</Button>
+
+      <Link to={"/ListFavorite"} >
+        <Button className="boton-nav" variant="contained">Favoritos</Button>
       </Link>
-      <Link to={"/HumanPage"} >
-        <Button className="boton-nav" variant="contained">Humans</Button>
-      </Link>
-      <Link to={"/about"} >
-        <Button className="boton-nav" variant="contained">Acerca de</Button>
-      </Link>
+
     </nav>
   )
 }

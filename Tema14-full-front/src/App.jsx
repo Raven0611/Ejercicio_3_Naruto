@@ -8,22 +8,18 @@ import Header from './Components/Header/Header';
 //importar las páginas de la App
 import HomePage from "./Pages/HomePage/HomePage";
 import AboutPage from "./Pages/AboutPage/AboutPage";
-import CharacterPage from "./Pages/CharactersPage/CharacterPage";
-import HumanPage from "./Pages/CharactersPage/HumanPage";
+import ListFavorite from "./Pages/ListFavorite/ListFavorite";
 
 
 const App = () => {
   return (
     <div className='App'>
       <Router>
-
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/CharacterPage" element={<CharacterPage />} />
-          <Route path="/HumanPage" element={<HumanPage />} />
+          <Route path="/ListFavorite" element={<ListFavorite />} />
           <Route path="/AboutPage/:id" element={<AboutPage />} />
-
         </Routes>
 
       </Router>

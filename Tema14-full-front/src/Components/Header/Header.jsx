@@ -6,9 +6,8 @@ import NavBar from '../NavBar/NavBar';
 const Header = () => {
   return (
     <header>
-      <img id='image-movie' src="https://m.media-amazon.com/images/M/MV5BN2U2YzU1ZjYtZjAyZS00MjhhLTliMzctMmRjMjI2MjdjNzEyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="" />
-      <h1 className='titulo-header'>Rick And Morty</h1>
-      <p className='movie-header'>- Movie App -</p>
+      <img id='image-movie' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/1200px-Naruto_logo.svg.png" alt="" />
+
       <NavBar />
     </header>
   )

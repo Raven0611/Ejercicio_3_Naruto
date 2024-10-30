@@ -1,46 +1,59 @@
-import React, { useEffect, useState } from 'react'
-import "./AboutPage.css"
+import React, { useEffect, useState } from 'react';
+import "./AboutPage.css";
 import axios from 'axios';
-import { useParams } from 'react-router-dom'
-const AboutPage = () => {
+import { useParams } from 'react-router-dom';
 
+const AboutPage = () => {
   const [data, setData] = useState(null);
   const { id } = useParams();
-
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const fetchApiRick = async () => {
-      const response = await axios.get("https://rickandmortyapi.com/api/character/" + id);
+    const fetchApiNaruto = async () => {
+      const response = await axios.get("https://dattebayo-api.onrender.com/characters/" + id);
       setData(response.data);
-
+      console.log("HOLAA");
+      console.log(response.data);
     }
-    fetchApiRick();
-
+    fetchApiNaruto();
   }, [id]);
 
-  return (
-    <div className='Home'>
-      {data ? (
+  // Función para cambiar la imagen del carrusel
+  const nextImage = () => {
+    if (data && currentIndex < data.images.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
 
-        <div className='contenedor-home'>
-          <img className="img-home" src={data.image} alt={data.name} />
-          <div className='info-home'>
-            <h1 className='nombre-home'>{data.name}</h1>
-            <div className='estado-tipo-home'>
-              <h2 className='estado-home'>{data.status}</h2>
-              <h2 className='tipo-home'>{data.species}</h2>
+  const prevImage = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  return (
+    <div className='about-page'>
+      {data ? (
+        <div className='contenedor-about-page'>
+          <div className="carrusel">
+            <button onClick={prevImage} disabled={currentIndex === 0}>❮</button>
+            <img className="img-about-page" src={data.images[currentIndex]} alt={data.name} />
+            <button onClick={nextImage} disabled={currentIndex === data.images.length - 1}>❯</button>
+          </div>
+          <div className='info-about-page'>
+            <h1 className='nombre-about-page'>{data.name}</h1>
+            <div className='about-about-page'>
+              <h2 className='clan-about-page'>CLAN :{data.personal.clan}</h2>
             </div>
-            <p className='genero-home'><span>género :</span>{data.gender}</p>
-            <p className='origen-home'><span>Origen :</span>{data.origin.name}</p>
+            <p className='genero-about-page'><span>género :</span> {data.personal.sex}</p>
+            <p className='cumpleanos-about-page'><span>Cumpleaños :</span> {data.personal.birthdate}</p>
           </div>
         </div>
-      )
-        : (
-          <p>Cargando API</p>
-        )}
+      ) : (
+        <p>Cargando API</p>
+      )}
     </div>
-
   )
 }
 
-export default AboutPage
+export default AboutPage;

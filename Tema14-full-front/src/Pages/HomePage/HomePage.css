@@ -1,23 +1,35 @@
 .Home {
     width: 100%;
     height: auto;
-    background-color: rgb(81, 28, 167);
+    background-color: rgb(243, 135, 84);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    gap: 1rem;
 
 }
 
 .contenedor-home {
     display: flex;
-    width: 24rem;
+    width: 100%;
+
+    max-width: 24rem;
+
     height: 10rem;
-    margin: .5rem;
+    margin: 0.5rem auto;
+
     border: .2rem solid black;
-    background-color: gray;
-    border-radius: .5rem;
+    background-color: rgba(216, 255, 211, 0.692);
+    border-radius: .3rem;
     text-decoration: none;
     color: black;
+    position: relative;
+}
+
+.contenedor-home:hover {
+    background-color: rgb(23, 47, 185);
+
+    height: 10.5rem;
 }
 
 .img-home {
@@ -30,7 +42,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-evenly;
 }
 
@@ -39,13 +51,78 @@
     display: flex;
     color: white;
     font-family: 'Arial', Times, serif;
-    font-size: 1.5rem;
-    justify-content: space-around;
+    font-size: 1rem;
+    justify-content: start;
 }
 
 .estado-tipo-home {
     display: flex;
-    justify-content: space-around;
+    font-size: .5rem;
+    justify-content: flex-start;
     width: 100%;
     font-family: 'Arial', Times, serif;
+}
+
+.boton-home {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 0.8rem;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.boton-home:hover {
+    background-color: rgb(8, 173, 250);
+    transform: scale(1.5);
+}
+
+.casa {
+    display: flex;
+    width: 100%;
+
+    max-width: 24rem;
+
+    height: 10rem;
+
+    margin: 0.5rem auto;
+
+    position: relative;
+
+}
+
+
+@media (max-width: 1200px) {
+    .Home {
+        grid-template-columns: repeat(2, 1fr);
+
+
+    }
+}
+
+@media (max-width: 800px) {
+    .Home {
+        grid-template-columns: 1fr;
+
+    }
+
+    .contenedor-home {
+        height: auto;
+
+    }
+
+    .contenedor-home:hover {
+        width: auto;
+        height: auto;
+    }
+
+    .img-home {
+        width: 100%;
+
+    }
 }
