@@ -51,7 +51,7 @@ const AboutPage = () => {
         </div>
       ) : (
         <p>Cargando API</p>
-      )}
+      )}    
     </div>
   )
 }

@@ -28,12 +28,12 @@
 
 }
 
-.img-about-page {
-    width: 100%;
-    border-radius: 10px;
-    max-height: 400px;
-    object-fit: cover;
-}
+    .img-about-page {
+        width: 100%;
+        border-radius: 10px;
+        max-height: 400px;
+        object-fit: cover;
+    }
 
 button {
     background-color: rgba(0, 0, 0, 0.5);
